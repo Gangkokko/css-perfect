@@ -59,3 +59,6 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # for CROS
 gem 'rack-cors'
+
+gem 'devise'
+gem 'devise_token_auth'

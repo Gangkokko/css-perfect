@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stage:</strong>
+  <%= @describe_quiz.stage_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @describe_quiz.image %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @describe_quiz.content %>
+</p>
+
+<%= link_to 'Edit', edit_describe_quiz_path(@describe_quiz) %> |
+<%= link_to 'Back', describe_quizzes_path %>

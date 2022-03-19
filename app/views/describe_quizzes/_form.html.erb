@@ -1,0 +1,32 @@
+<%= form_with(model: describe_quiz) do |form| %>
+  <% if describe_quiz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(describe_quiz.errors.count, "error") %> prohibited this describe_quiz from being saved:</h2>
+
+      <ul>
+        <% describe_quiz.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :stage_id %>
+    <%= form.text_field :stage_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

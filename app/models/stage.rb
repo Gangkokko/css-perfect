@@ -8,8 +8,5 @@ class Stage < ApplicationRecord
   mount_uploader :image, ImageUploader
   has_many :describe_quizzes, dependent: :destroy
 
-  def quiz
-
-  end
+  def quiz; end
 end
-

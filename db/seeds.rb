@@ -18,3 +18,10 @@ User.find_or_create_by(email: 'exapmple@example.com') do |user|
   user.password =              'password'
   user.password_confirmation = 'password'
 end
+
+Stage.find_or_create_by(name: "testStage") do |stage|
+  stage.user = User.first
+  stage.name = "testStage"
+  stage.description = "これはテストステージです。説明が入ります。"
+  stage.image = File.open("./sample.jpg")
+end

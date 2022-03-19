@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @stage.user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @stage.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @stage.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @stage.image %>
+</p>
+
+<p>
+  <strong>Is public:</strong>
+  <%= @stage.is_public %>
+</p>
+
+<%= link_to 'Edit', edit_stage_path(@stage) %> |
+<%= link_to 'Back', stages_path %>

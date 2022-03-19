@@ -2,7 +2,7 @@
 
 module Api
   module V1
-    module DescribeQuizzesHelper
+    module ChallengesHelper
     end
   end
 end

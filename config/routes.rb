@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :challenges
   resources :describe_quizzes
   resources :stages
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
       resources :users, only:[:index, :show]
       resources :stages, only:[:index, :show, :create]
       resources :describe_quizzes, only:[:index, :show]
+      resources :challenges, only:[:create]
 
       mount_devise_token_auth_for 'User', at: 'auth', controllers: {
         registrations: 'api/v1/auth/registrations'

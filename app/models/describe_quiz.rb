@@ -10,6 +10,7 @@ class DescribeQuiz < ApplicationRecord
   def image_nil?
     image.blank?
   end
+  
   def content_nil?
     content.blank?
   end

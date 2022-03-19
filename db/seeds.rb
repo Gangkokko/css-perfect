@@ -25,3 +25,9 @@ Stage.find_or_create_by(name: "testStage") do |stage|
   stage.description = "これはテストステージです。説明が入ります。1~30"
   stage.image = File.open("./sample.jpg")
 end
+
+DescribeQuiz.find_or_create_by(id: 10) do |quiz|
+  quiz.stage = Stage.first
+  quiz.content = "問題文です。割と長い文章も大丈夫だとありがたいです。何文字にしよう。１００とか？100にしますねバリデーション"
+  quiz.image = File.open("./sample.jpg")
+end

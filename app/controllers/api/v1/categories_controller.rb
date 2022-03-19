@@ -6,17 +6,17 @@ module Api
       skip_before_action :verify_authenticity_token
       def index
         @categories = Category.all
-        # render json: { message: @categories }
+        # render json: { status: 'SUCCESS',data: @categories }
       end
 
       def create
         # curl -X POST -H "Content-Type: application/json" -d '{"category": {"content": "TESTTITLE"}}' http://localhost:3001/api/v1/categories
-        category = Category.new(category_params)
-        pp params
-        if category.save
-          render json: { status: 'SUCCESS', data: category }
+        @category = Category.new(category_params)
+
+        if @category.save
+          render json: { status: 'SUCCESS', data: @category }
         else
-          render json: { status: 'ERROR', data: category.errors }
+          render json: { status: 'ERROR', data: @category.errors }
         end
       end
 

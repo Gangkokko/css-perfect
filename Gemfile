@@ -62,3 +62,5 @@ gem 'rack-cors'
 
 gem 'devise'
 gem 'devise_token_auth'
+
+gem 'carrierwave'

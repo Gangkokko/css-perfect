@@ -21,7 +21,7 @@ end
 
 Stage.find_or_create_by(name: "testStage") do |stage|
   stage.user = User.first
-  stage.name = "testStage"
-  stage.description = "これはテストステージです。説明が入ります。"
+  stage.name = "testStage 1~30"
+  stage.description = "これはテストステージです。説明が入ります。1~30"
   stage.image = File.open("./sample.jpg")
 end

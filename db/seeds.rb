@@ -11,3 +11,10 @@
 [*1..4].each do |n|
   Category.create!(content: "test#{n}")
 end
+
+User.find_or_create_by(email: 'exapmple@example.com') do |user|
+  user.email = 'examplen@example.com'
+  user.name = 'Example Admin'
+  user.password =              'password'
+  user.password_confirmation = 'password'
+end

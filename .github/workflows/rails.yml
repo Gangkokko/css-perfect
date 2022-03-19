@@ -20,5 +20,5 @@ jobs:
         git pull origin main
         sudo service docker start
         sudo chown -R $USER db
-        ls -a tmp
+        docker compose run web rails db:seed
         # docker compose run web rails db:migrate

@@ -4,5 +4,6 @@ class Api::V1::DescribeQuizzesController < ApplicationController
   end
 
   def show
+    @quiz = DescribeQuiz.find(params[:id])
   end
 end

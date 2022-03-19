@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+json.status 'SUCCESS'
 json.data do
   json.array! @describe_quizzes do |quiz|
     json.id quiz.id

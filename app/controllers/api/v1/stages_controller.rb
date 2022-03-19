@@ -13,6 +13,7 @@ class Api::V1::StagesController < ApplicationController
   end
 
   def show
+    @stage = Stage.find(params[:id])
   end
 
   private

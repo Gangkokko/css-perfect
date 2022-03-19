@@ -10,6 +10,7 @@ module Api
       end
 
       def create
+        # curl -X POST -H "Content-Type: application/json" -d '{"category": {"content": "TESTTITLE"}}' http://localhost:3001/api/v1/categories
         category = Category.new(category_params)
         pp params
         if category.save
@@ -22,7 +23,7 @@ module Api
       private
 
       def category_params
-        pp params.permit(:content)
+        pp params.require(:category).permit(:content)
       end
     end
   end

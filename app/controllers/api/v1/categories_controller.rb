@@ -3,14 +3,16 @@
 module Api
   module V1
     class CategoriesController < ApplicationController
-
+      skip_before_action :verify_authenticity_token
       def index
         @categories = Category.all
-        render json: { status: 200, message: @categories }
+        # render json: { message: @categories }
       end
 
       def create
+        # curl -X POST -H "Content-Type: application/json" -d '{"category": {"content": "TESTTITLE"}}' http://localhost:3001/api/v1/categories
         category = Category.new(category_params)
+        pp params
         if category.save
           render json: { status: 'SUCCESS', data: category }
         else

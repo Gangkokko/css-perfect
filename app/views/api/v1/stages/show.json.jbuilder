@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-json.status "SUCCESS"
+
+json.status 'SUCCESS'
 json.data do
   json.id @stage.id
   json.name @stage.name

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-json.status "SUCCESS"
+
+json.status 'SUCCESS'
 json.data do
   json.array! @stages do |stage|
     json.id stage.id

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Stage < ApplicationRecord
   belongs_to :user
   validates :name, presence: true, length: { minimum: 1, maximum: 30 }

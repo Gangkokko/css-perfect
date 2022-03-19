@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-json.set! "status", 'SUCCESS'
+
+json.set! 'status', 'SUCCESS'
 json.data do
   json.array! @users do |user|
     json.id user.id

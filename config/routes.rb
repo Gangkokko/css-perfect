@@ -6,9 +6,12 @@ Rails.application.routes.draw do
     namespace :v1 do # バージョン1を表している
       resources :categories
       # mount_devise_token_auth_for 'User', at: 'auth'
-      mount_devise_token_auth_for 'User', at: 'auth', controllers: {
-        omniauth_callbacks: 'api/v1/auth/omniauth_callbacks'
-      }
+      # mount_devise_token_auth_for 'User', at: 'auth', controllers: {
+      #   omniauth_callbacks: 'api/v1/auth/omniauth_callbacks'
+      # }
     end
   end
+  mount_devise_token_auth_for 'User', at: 'auth', controllers: {
+    omniauth_callbacks: 'api/v1/auth/omniauth_callbacks'
+  }
 end

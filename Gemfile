@@ -62,6 +62,7 @@ gem 'devise'
 gem 'devise_token_auth'
 gem 'rack-cors'
 
+# gem 'omniauth'. '~> 1.9'. '>= 1.9.1'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-oauth2'

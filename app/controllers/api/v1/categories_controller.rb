@@ -23,7 +23,7 @@ module Api
       private
 
       def category_params
-        pp params.require(:category).permit(:content)
+        params.require(:category).permit(:content)
       end
     end
   end

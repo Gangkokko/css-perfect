@@ -4,7 +4,8 @@ module Api
   module V1
     class CategoriesController < ApplicationController
       # protect_from_forgery :except => ["create"]
-      skip_before_action :verify_authenticity_token
+      # protect_from_forgery :expect => ["create"]
+
       def index
         @categories = Category.all
         # render json: { status: 'SUCCESS',data: @categories }

@@ -21,5 +21,4 @@ jobs:
         sudo service docker start
         mkdir tmp/db
         sudo chown -R $USER tmp/db
-        ls tmp
-        # docker compose run web rails db:migrate
+        docker compose run web rails db:migrate

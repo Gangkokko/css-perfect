@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
 
   validates :name, presence: true
+  mount_uploader :image, ImageUploader
 end

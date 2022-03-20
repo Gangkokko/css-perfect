@@ -19,5 +19,6 @@ jobs:
         ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME}
         git pull origin main
         sudo service docker start
+        docker compose up
         # sudo chown -R $USER tmp/db
         # docker compose run web rails db:migrate

@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Stage#<%= @stage.id %></h1>
 <p>
   <strong>User:</strong>
   <%= @stage.user_id %>
@@ -27,3 +27,35 @@
 
 <%= link_to 'Edit', edit_stage_path(@stage) %> |
 <%= link_to 'Back', stages_path %>
+
+<p id="notice"><%= notice %></p>
+
+<h2>Describe Quizzes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>Image</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quizzes.each do |describe_quiz| %>
+      <tr>
+        <td><%= describe_quiz.stage_id %></td>
+        <td><%= describe_quiz.image %></td>
+        <td><%= describe_quiz.content %></td>
+        <td><%= link_to 'Show', describe_quiz %></td>
+        <td><%= link_to 'Edit', edit_describe_quiz_path(describe_quiz) %></td>
+        <td><%= link_to 'Destroy', describe_quiz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Describe Quiz', new_describe_quiz_path %>

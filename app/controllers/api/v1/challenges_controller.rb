@@ -4,9 +4,9 @@ module Api
   module V1
     class ChallengesController < ApplicationController
       def create
-        @challenge = Challenge.new(category_params)
+        @challenge = Challenge.new(challenge_params)
 
-        if @category.save
+        if @challenge.save
           render json: { status: 'SUCCESS', data: @challenge }
         else
           render json: { status: 'ERROR', data: @challenge.errors }
@@ -15,7 +15,7 @@ module Api
 
       private
 
-      def category_params
+      def challenge_params
         params.require(:challenge).permit(:stage_id, :user_id)
       end
     end

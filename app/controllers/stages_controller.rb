@@ -10,7 +10,7 @@ class StagesController < ApplicationController
 
   # GET /stages/1 or /stages/1.json
   def show
-    @quizzes = @stage.describe_quizzes
+    @quizzes = @stage.describe_quizzes + @stage.select_quizzes
   end
 
   # GET /stages/new

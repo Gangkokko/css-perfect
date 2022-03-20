@@ -7,6 +7,7 @@ class Stage < ApplicationRecord
   validates :image, presence: true
   mount_uploader :image, ImageUploader
   has_many :describe_quizzes, dependent: :destroy
+  has_many :select_quizzes, dependent: :destroy
 
   def quiz; end
 end

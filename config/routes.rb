@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :select_quizzes
   resources :challenges
   resources :describe_quizzes
   resources :stages
@@ -9,7 +10,9 @@ Rails.application.routes.draw do
     namespace :v1 do # バージョン1を表している
       resources :categories
       resources :users, only:[:index, :show]
-      resources :stages, only:[:index, :show, :create]
+      resources :stages, only:[:index, :show, :create] do
+        resources :quizzes, only:[:index]
+      end
       resources :describe_quizzes, only:[:index, :show]
       resources :challenges, only:[:create]
 

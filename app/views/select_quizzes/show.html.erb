@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stage:</strong>
+  <%= @select_quiz.stage_id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @select_quiz.content %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @select_quiz.image %>
+</p>
+
+<p>
+  <strong>First choice:</strong>
+  <%= @select_quiz.first_choice %>
+</p>
+
+<p>
+  <strong>Second choice:</strong>
+  <%= @select_quiz.second_choice %>
+</p>
+
+<p>
+  <strong>Third choice:</strong>
+  <%= @select_quiz.third_choice %>
+</p>
+
+<p>
+  <strong>Forth choice:</strong>
+  <%= @select_quiz.forth_choice %>
+</p>
+
+<p>
+  <strong>Answer number:</strong>
+  <%= @select_quiz.answer_number %>
+</p>
+
+<%= link_to 'Edit', edit_select_quiz_path(@select_quiz) %> |
+<%= link_to 'Back', select_quizzes_path %>

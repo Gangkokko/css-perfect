@@ -3,12 +3,8 @@
 module Api
   module V1
     class CategoriesController < ApplicationController
-      # protect_from_forgery :except => ["create"]
-      # protect_from_forgery :expect => ["create"]
-
       def index
         @categories = Category.all
-        # render json: { status: 'SUCCESS',data: @categories }
       end
 
       def create

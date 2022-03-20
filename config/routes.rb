@@ -1,11 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  namespace :api do
-    namespace :v1 do
-      get 'quizzes/index'
-    end
-  end
+  resources :select_quizzes
   resources :challenges
   resources :describe_quizzes
   resources :stages

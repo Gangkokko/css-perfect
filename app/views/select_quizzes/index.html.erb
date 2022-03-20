@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Select Quizzes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>Content</th>
+      <th>Image</th>
+      <th>First choice</th>
+      <th>Second choice</th>
+      <th>Third choice</th>
+      <th>Forth choice</th>
+      <th>Answer number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @select_quizzes.each do |select_quiz| %>
+      <tr>
+        <td><%= select_quiz.stage_id %></td>
+        <td><%= select_quiz.content %></td>
+        <td><%= select_quiz.image %></td>
+        <td><%= select_quiz.first_choice %></td>
+        <td><%= select_quiz.second_choice %></td>
+        <td><%= select_quiz.third_choice %></td>
+        <td><%= select_quiz.forth_choice %></td>
+        <td><%= select_quiz.answer_number %></td>
+        <td><%= link_to 'Show', select_quiz %></td>
+        <td><%= link_to 'Edit', edit_select_quiz_path(select_quiz) %></td>
+        <td><%= link_to 'Destroy', select_quiz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Select Quiz', new_select_quiz_path %>

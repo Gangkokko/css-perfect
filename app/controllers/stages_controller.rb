@@ -9,7 +9,9 @@ class StagesController < ApplicationController
   end
 
   # GET /stages/1 or /stages/1.json
-  def show; end
+  def show
+    @quizzes = @stage.describe_quizzes
+  end
 
   # GET /stages/new
   def new

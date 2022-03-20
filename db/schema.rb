@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_19_191144) do
+ActiveRecord::Schema.define(version: 2022_03_20_020903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,20 @@ ActiveRecord::Schema.define(version: 2022_03_19_191144) do
     t.index ["stage_id"], name: "index_describe_quizzes_on_stage_id"
   end
 
+  create_table "select_quizzes", force: :cascade do |t|
+    t.bigint "stage_id", null: false
+    t.string "content", null: false
+    t.string "image"
+    t.string "first_choice", null: false
+    t.string "second_choice", null: false
+    t.string "third_choice", null: false
+    t.string "forth_choice", null: false
+    t.integer "answer_number", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["stage_id"], name: "index_select_quizzes_on_stage_id"
+  end
+
   create_table "stages", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "name", null: false
@@ -110,5 +124,6 @@ ActiveRecord::Schema.define(version: 2022_03_19_191144) do
   add_foreign_key "challenges", "stages"
   add_foreign_key "challenges", "users"
   add_foreign_key "describe_quizzes", "stages"
+  add_foreign_key "select_quizzes", "stages"
   add_foreign_key "stages", "users"
 end
